@@ -12,7 +12,7 @@ A comprehensive **Patient Tracker** application designed to streamline the manag
 - **Customizable Dashboards**: Personalized dashboards that users can tailor to their preferences, enhancing the user experience.
 - **Data Visualization**: Intuitive presentation of data through graphical elements, making information easy to understand and analyze.
 
-📽️ **Project Demo**: [HEMANGANI GitHub Base Repo](https://github.com/HEMANGANI/Healthcare-Management-System)
+
 
 ---
 
