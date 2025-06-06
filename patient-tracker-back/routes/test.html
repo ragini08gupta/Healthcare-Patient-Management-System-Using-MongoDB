@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reset Password</title>
+</head>
+<body>
+    <h2>Reset Doctor Password</h2>
+    <form id="resetForm">
+        <label>Email:</label><br>
+        <input type="email" id="email" value="harshal@gmail.com" required><br><br>
+        
+        <label>New Password:</label><br>
+        <input type="password" id="password" value="harshal@123" required><br><br>
+        
+        <button type="submit">Reset Password</button>
+    </form>
+
+    <script>
+        document.getElementById('resetForm').onsubmit = async function(e) {
+            e.preventDefault();
+            
+            try {
+                const response = await fetch('http://localhost:3000/api/doctors/reset-password-temp', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: document.getElementById('email').value,
+                        newPassword: document.getElementById('password').value
+                    })
+                });
+                
+                const result = await response.json();
+                alert(JSON.stringify(result));
+            } catch (error) {
+                alert('Error: ' + error.message);
+            }
+        };
+    </script>
+</body>
+</html>
